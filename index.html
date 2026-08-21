@@ -1,35 +1,800 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sentinel Bridge Advisory Group</title>
-<meta name="description" content="Strategic safety, executive readiness and trusted leadership for resilient organizations.">
-<style>
-:root{--navy:#031a38;--navy2:#08284d;--gold:#c58a1b;--cream:#f7f6f2;--ink:#0b1d3a;--line:rgba(197,138,27,.4)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,"Segoe UI",sans-serif;background:var(--navy)}a{text-decoration:none;color:inherit}.topbar{position:sticky;top:0;z-index:20;min-height:80px;background:#fbfbfa;display:flex;align-items:center;justify-content:space-between;padding:0 3.5%;box-shadow:0 1px 4px #0002}.brand{display:flex;align-items:center;gap:10px}.brand img{width:44px;height:52px}.brand strong{font:700 24px Georgia,serif;letter-spacing:1px;display:block}.brand small{font-size:11px;letter-spacing:4px;color:var(--gold);font-weight:700}.nav{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:700}.nav a:hover{color:var(--gold)}.nav .cta,.gold{background:linear-gradient(135deg,#b67a10,#d49a2b);color:#fff;padding:14px 18px}.menu{display:none;border:0;background:none;font-size:28px;color:var(--navy)}.num{position:relative}.num:before{content:attr(data-num);position:absolute;z-index:4;left:0;top:0;width:54px;height:100%;background:var(--navy);color:#d7a037;font:40px Georgia,serif;text-align:center;padding-top:12px;border-right:1px solid #fff2}.num:after{content:"";position:absolute;z-index:5;left:15px;top:59px;width:23px;height:2px;background:var(--gold)}.hero{min-height:540px;background:linear-gradient(90deg,#031a38f7 0%,#031a38d9 32%,#031a3840 68%,#031a3815),url('images/hero.svg') center/cover;display:flex;align-items:center;color:#fff}.hero-copy{margin-left:90px;max-width:650px;padding:70px 25px 70px 0}.eyebrow,.kicker{font-size:13px;letter-spacing:2px;color:var(--gold);font-weight:800}.hero h1{font:500 clamp(44px,5vw,68px)/1.04 Georgia,serif;margin:12px 0 20px}.hero h1 em,.contact h2 em{color:var(--gold);font-style:normal}.hero p{font-size:17px;line-height:1.6;max-width:590px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.button{display:inline-block;padding:14px 18px;font-size:12px;font-weight:800}.outline{border:1px solid #fffd;color:#fff}.section{padding:35px 6% 35px 90px}.about{background:var(--cream);display:grid;grid-template-columns:34% 66%;min-height:410px}.about h2{font:500 35px/1.1 Georgia,serif;margin:8px 0 14px}.rule{width:40px;height:2px;background:var(--gold);margin:10px 0 15px}.about-copy p{font-size:14px;line-height:1.7}.about-right{padding-left:20px}.caps{display:grid;grid-template-columns:repeat(5,1fr)}.cap{min-height:110px;text-align:center;padding:5px 10px;border-left:1px solid var(--line);font-size:12px;font-weight:700;white-space:pre-line}.cap:last-child{border-right:1px solid var(--line)}.cap b{display:block;font-size:35px;font-weight:400;margin-bottom:8px}.meeting{margin-top:20px;height:180px;background:url('images/meeting.svg') center/cover}.services{background:linear-gradient(180deg,var(--navy),var(--navy2));color:#fff}.heading{text-align:center}.heading h2{font:500 34px Georgia,serif;margin:0}.heading .rule{margin:7px auto 18px}.grid{display:grid;grid-template-columns:repeat(3,1fr)}.service{display:grid;grid-template-columns:58px 1fr;gap:10px;padding:21px 18px;min-height:120px;border-right:1px solid #fff2;border-bottom:1px solid #fff2}.service:nth-child(3n){border-right:0}.service:nth-last-child(-n+3){border-bottom:0}.icon{color:var(--gold);font-size:38px;text-align:center}.service h3{font-size:15px;margin:1px 0 7px}.service p{font-size:11.5px;line-height:1.5;color:#e3e9f0;margin:0}.leadership{background:var(--cream)}.leaders{display:grid;grid-template-columns:1fr 1fr;gap:45px;margin-top:15px}.leader{display:grid;grid-template-columns:160px 1fr;gap:20px}.portrait{height:215px;background-size:cover;background-position:center}.kevin{background-image:url('images/kevin.png')}.virginia{background-image:url('images/virginia.png')}.leader h3{font:500 23px Georgia,serif;margin:5px 0}.role{color:var(--gold);font-size:13px;font-weight:700}.leader p,.leader li{font-size:12px;line-height:1.5}.leader ul{padding-left:17px;margin:5px 0}.leader li::marker{color:var(--gold)}.insights{background:#eae8e1;padding:38px 7% 38px 90px;display:flex;align-items:center;justify-content:space-between}.insights h2{font:500 31px Georgia,serif}.insights .outline{color:var(--navy);border-color:var(--navy)}.contact{background:linear-gradient(90deg,#031a38f7,#031a38d9),url('images/city.svg') center/cover;color:#fff;display:grid;grid-template-columns:1.5fr .9fr auto;align-items:center;gap:25px;padding-top:30px;padding-bottom:30px}.contact-brand{display:flex;gap:15px;align-items:center}.contact-brand img{width:58px}.contact h2{font:500 30px Georgia,serif;margin:0 0 8px}.contact p{font-size:12px;line-height:1.5;margin:0}.details{display:flex;flex-direction:column;gap:10px;font-size:13px}.details span{font-size:12px;margin-left:8px}footer{background:#02142d;color:#dce4ee;padding:10px 6%;min-height:60px;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:10px}.footer-brand{display:flex;align-items:center;gap:8px;font-family:Georgia,serif;letter-spacing:1px}.footer-brand img{width:30px;height:36px}.footer-brand small{color:var(--gold);letter-spacing:2px}.footer-links{display:flex;gap:12px}.footer-links i{color:var(--gold)}
-@media(max-width:1050px){.nav{gap:15px}.about{grid-template-columns:1fr}.about-right{padding-left:0}.contact{grid-template-columns:1fr 1fr}.contact>.button{justify-self:start}}@media(max-width:760px){.topbar{min-height:68px;padding:0 18px}.brand strong{font-size:18px}.brand small{font-size:8px;letter-spacing:2.5px}.brand img{width:35px;height:42px}.menu{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:12px 20px 20px;box-shadow:0 10px 20px #0002}.nav.open{display:flex}.nav a{padding:11px 0}.nav .cta{text-align:center}.num:before,.num:after{display:none}.hero{min-height:650px}.hero-copy{margin-left:24px;padding-right:20px}.hero h1{font-size:43px}.section{padding-left:24px;padding-right:24px}.caps{grid-template-columns:repeat(2,1fr)}.cap{border-bottom:1px solid var(--line)}.grid{grid-template-columns:1fr}.service,.service:nth-last-child(-n+3){border-right:0;border-bottom:1px solid #fff2}.service:last-child{border-bottom:0}.leaders{grid-template-columns:1fr;gap:30px}.leader{grid-template-columns:130px 1fr}.portrait{height:175px}.insights{padding:30px 24px;display:block}.contact{grid-template-columns:1fr}.contact>.button{justify-self:start}footer{flex-direction:column;align-items:flex-start;padding:18px 24px}}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sentinel Bridge Advisory Group</title>
+    <meta name="description"
+        content="Strategic safety, executive readiness and trusted leadership for resilient organizations.">
+    <style>
+        :root {
+            --navy: #031a38;
+            --navy2: #08284d;
+            --gold: #c58a1b;
+            --cream: #f7f6f2;
+            --ink: #0b1d3a;
+            --line: rgba(197, 138, 27, .4)
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: Arial, "Segoe UI", sans-serif;
+            background: var(--navy)
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            min-height: 80px;
+            background: #fbfbfa;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 3.5%;
+            box-shadow: 0 1px 4px #0002
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .brand img {
+            width: 98px;
+            height: 52px
+        }
+
+        .brand strong {
+            font: 700 24px Georgia, serif;
+            letter-spacing: 1px;
+            display: block
+        }
+
+        .brand small {
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: var(--gold);
+            font-weight: 700
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            font-size: 12px;
+            font-weight: 700
+        }
+
+        .nav a:hover {
+            color: var(--gold)
+        }
+
+        .nav .cta,
+        .gold {
+            background: linear-gradient(135deg, #b67a10, #d49a2b);
+            color: #fff;
+            padding: 14px 18px
+        }
+
+        .menu {
+            display: none;
+            border: 0;
+            background: none;
+            font-size: 28px;
+            color: var(--navy)
+        }
+
+        .num {
+            position: relative
+        }
+
+        .num:before {
+            content: attr(data-num);
+            position: absolute;
+            z-index: 4;
+            left: 0;
+            top: 0;
+            width: 54px;
+            height: 100%;
+            background: var(--navy);
+            color: #d7a037;
+            font: 40px Georgia, serif;
+            text-align: center;
+            padding-top: 12px;
+            border-right: 1px solid #fff2
+        }
+
+        .num:after {
+            content: "";
+            position: absolute;
+            z-index: 5;
+            left: 15px;
+            top: 59px;
+            width: 23px;
+            height: 2px;
+            background: var(--gold)
+        }
+
+        .hero {
+            min-height: 540px;
+            background: linear-gradient(90deg, #031a38f7 0%, #031a38d9 32%, #031a3840 68%, #031a3815), url('images/hero.svg') center/cover;
+            display: flex;
+            align-items: center;
+            color: #fff
+        }
+
+        .hero-copy {
+            margin-left: 90px;
+            max-width: 650px;
+            padding: 70px 25px 70px 0
+        }
+
+        .kicker {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-weight: 800
+        }
+
+        .hero h1 {
+            font: 500 clamp(44px, 5vw, 68px)/1.04 Georgia, serif;
+            margin: 12px 0 20px
+        }
+
+        .hero h1 em,
+        .contact h2 em {
+            color: var(--gold);
+            font-style: normal
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.6;
+            max-width: 590px
+        }
+
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 18px;
+            font-size: 12px;
+            font-weight: 800
+        }
+
+        .outline {
+            border: 1px solid #fffd;
+            color: #fff
+        }
+
+        .section {
+            padding: 35px 6% 35px 90px
+        }
+
+        .about {
+            background: var(--cream);
+            display: grid;
+            grid-template-columns: 34% 66%;
+            min-height: 410px
+        }
+
+        .about h2 {
+            font: 500 35px/1.1 Georgia, serif;
+            margin: 8px 0 14px
+        }
+
+        .rule {
+            width: 40px;
+            height: 2px;
+            background: var(--gold);
+            margin: 10px 0 15px
+        }
+
+        .about-copy p {
+            font-size: 14px;
+            line-height: 1.7
+        }
+
+        .about-right {
+            padding-left: 20px
+        }
+
+        .caps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr)
+        }
+
+        .cap {
+            min-height: 110px;
+            text-align: center;
+            padding: 5px 10px;
+            border-left: 1px solid var(--line);
+            font-size: 12px;
+            font-weight: 700;
+            white-space: pre-line
+        }
+
+        .cap:last-child {
+            border-right: 1px solid var(--line)
+        }
+
+        .cap b {
+            display: block;
+            font-size: 35px;
+            font-weight: 400;
+            margin-bottom: 8px
+        }
+
+        .meeting {
+            margin-top: 20px;
+            height: 180px;
+            background: url('images/meeting.svg') center/cover
+        }
+
+        .services {
+            background: linear-gradient(180deg, var(--navy), var(--navy2));
+            color: #fff
+        }
+
+        .heading {
+            text-align: center
+        }
+
+        .heading h2 {
+            font: 500 34px Georgia, serif;
+            margin: 0
+        }
+
+        .heading .rule {
+            margin: 7px auto 18px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr)
+        }
+
+        .service {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 10px;
+            padding: 21px 18px;
+            min-height: 120px;
+            border-right: 1px solid #fff2;
+            border-bottom: 1px solid #fff2
+        }
+
+        .service:nth-child(3n) {
+            border-right: 0
+        }
+
+        .service:nth-last-child(-n+3) {
+            border-bottom: 0
+        }
+
+        .icon {
+            color: var(--gold);
+            font-size: 38px;
+            text-align: center
+        }
+
+        .service h3 {
+            font-size: 15px;
+            margin: 1px 0 7px
+        }
+
+        .service p {
+            font-size: 11.5px;
+            line-height: 1.5;
+            color: #e3e9f0;
+            margin: 0
+        }
+
+        .leadership {
+            background: var(--cream)
+        }
+
+        .leaders {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            margin-top: 15px
+        }
+
+        .leader {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 20px
+        }
+
+        .portrait {
+            height: 215px;
+            background-size: cover;
+            background-position: center
+        }
+
+        .kevin {
+            background-image: url('images/kevin.png')
+        }
+
+        .virginia {
+            background-image: url('images/virginia.png')
+        }
+
+        .leader h3 {
+            font: 500 23px Georgia, serif;
+            margin: 5px 0
+        }
+
+        .role {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700
+        }
+
+        .leader p,
+        .leader li {
+            font-size: 12px;
+            line-height: 1.5
+        }
+
+        .leader ul {
+            padding-left: 17px;
+            margin: 5px 0
+        }
+
+        .leader li::marker {
+            color: var(--gold)
+        }
+
+        .insights {
+            background: #eae8e1;
+            padding: 38px 7% 38px 90px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        .insights h2 {
+            font: 500 31px Georgia, serif
+        }
+
+        .insights .outline {
+            color: var(--navy);
+            border-color: var(--navy)
+        }
+
+        .contact {
+            background: linear-gradient(90deg, #031a38f7, #031a38d9), url('images/city.svg') center/cover;
+            color: #fff;
+            display: grid;
+            grid-template-columns: 1.5fr .9fr auto;
+            align-items: center;
+            gap: 25px;
+            padding-top: 30px;
+            padding-bottom: 30px
+        }
+
+        .contact-brand {
+            display: flex;
+            gap: 15px;
+            align-items: center
+        }
+
+        .contact-brand img {
+            width: 58px
+        }
+
+        .contact h2 {
+            font: 500 30px Georgia, serif;
+            margin: 0 0 8px
+        }
+
+        .contact p {
+            font-size: 12px;
+            line-height: 1.5;
+            margin: 0
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 13px
+        }
+
+        .details span {
+            font-size: 12px;
+            margin-left: 8px
+        }
+
+        footer {
+            background: #02142d;
+            color: #dce4ee;
+            padding: 10px 6%;
+            min-height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            font-size: 10px
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: Georgia, serif;
+            letter-spacing: 1px
+        }
+
+        .footer-brand img {
+            width: 78px;
+            height: 36px
+        }
+
+        .footer-brand small {
+            color: var(--gold);
+            letter-spacing: 2px
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 12px
+        }
+
+        .footer-links i {
+            color:var(--gold) @media(max-width:1050px) {
+                .nav {
+                    gap: 15px
+                }
+
+                .about {
+                    grid-template-columns: 1fr
+                }
+
+                .about-right {
+                    padding-left: 0
+                }
+
+                .contact {
+                    grid-template-columns: 1fr 1fr
+                }
+
+                .contact>.button {
+                    justify-self: start
+                }
+            }
+
+            @media(max-width:760px) {
+                .topbar {
+                    min-height: 68px;
+                    padding: 0 18px
+                }
+
+                .brand strong {
+                    font-size: 18px
+                }
+
+                .brand small {
+                    font-size: 8px;
+                    letter-spacing: 2.5px
+                }
+
+                .brand img {
+                    width: 35px;
+                    height: 42px
+                }
+
+                .menu {
+                    display: block
+                }
+
+                .nav {
+                    display: none;
+                    position: absolute;
+                    top: 68px;
+                    left: 0;
+                    right: 0;
+                    background: #fff;
+                    flex-direction: column;
+                    align-items: stretch;
+                    padding: 12px 20px 20px;
+                    box-shadow: 0 10px 20px #0002
+                }
+
+                .nav.open {
+                    display: flex
+                }
+
+                .nav a {
+                    padding: 11px 0
+                }
+
+                .nav .cta {
+                    text-align: center
+                }
+
+                .num:before,
+                .num:after {
+                    display: none
+                }
+
+                .hero {
+                    min-height: 650px
+                }
+
+                .hero-copy {
+                    margin-left: 24px;
+                    padding-right: 20px
+                }
+
+                .hero h1 {
+                    font-size: 43px
+                }
+
+                .section {
+                    padding-left: 24px;
+                    padding-right: 24px
+                }
+
+                .caps {
+                    grid-template-columns: repeat(2, 1fr)
+                }
+
+                .cap {
+                    border-bottom: 1px solid var(--line)
+                }
+
+                .grid {
+                    grid-template-columns: 1fr
+                }
+
+                .service,
+                .service:nth-last-child(-n+3) {
+                    border-right: 0;
+                    border-bottom: 1px solid #fff2
+                }
+
+                .service:last-child {
+                    border-bottom: 0
+                }
+
+                .leaders {
+                    grid-template-columns: 1fr;
+                    gap: 30px
+                }
+
+                .leader {
+                    grid-template-columns: 130px 1fr
+                }
+
+                .portrait {
+                    height: 175px
+                }
+
+                .insights {
+                    padding: 30px 24px;
+                    display: block
+                }
+
+                .contact {
+                    grid-template-columns: 1fr
+                }
+
+                .contact>.button {
+                    justify-self: start
+                }
+
+                footer {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 18px 24px
+                }
+            }
+    </style>
 </head>
+
 <body>
-<header class="topbar"><a class="brand" href="#top"><img src="images/SB_Logo.png" alt="Sentinel Bridge logo"><span><strong>SENTINEL BRIDGE</strong><small>ADVISORY GROUP</small></span></a><button class="menu" onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button><nav class="nav"><a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#leadership">LEADERSHIP</a><a href="#insights">INSIGHTS</a><a href="#contact">CONTACT</a><a class="cta" href="#contact">SCHEDULE A CONSULTATION →</a></nav></header>
-<main id="top">
-<section class="hero num" data-num="1"><div class="hero-copy"><div class="eyebrow">SENTINEL BRIDGE ADVISORY GROUP</div><h1>Strategic Safety.<br>Executive Readiness.<br><em>Trusted Leadership.</em></h1><p>Helping higher education institutions, healthcare organizations, and businesses build safer, more resilient organizations through strategic risk management and executive advisory services.</p><div class="actions"><a class="button gold" href="#contact">SCHEDULE A CONSULTATION →</a><a class="button outline" href="#contact">REQUEST A RISK ASSESSMENT →</a></div></div></section>
-<section id="about" class="about num" data-num="2"><div class="about-copy"><div class="kicker">WHO WE ARE</div><h2>Trusted Advisors to<br>Organizational Leaders</h2><div class="rule"></div><p>Today's security challenges require more than responding to incidents—they require strategic leadership, proactive planning, and informed decision-making.</p><p>Sentinel Bridge Advisory Group partners with executive leaders to strengthen safety programs, improve preparedness, and build resilient organizations.</p></div><div class="about-right"><div class="caps"><div class="cap"><b>◇</b>Identify and<br>Reduce Risk</div><div class="cap"><b>♧</b>Strengthen<br>Safety Programs</div><div class="cap"><b>☷</b>Improve Emergency<br>Preparedness</div><div class="cap"><b>⌂</b>Enhance Organizational<br>Resilience</div><div class="cap"><b>✓</b>Support Compliance &<br>Readiness</div></div><div class="meeting"></div></div></section>
-<section id="services" class="services section num" data-num="3"><div class="heading"><h2>Our Services</h2><div class="rule"></div></div><div class="grid">
-<article class="service"><div class="icon">◇</div><div><h3>Security Risk Assessments</h3><p>Comprehensive assessments that identify vulnerabilities and provide prioritized, actionable recommendations.</p></div></article>
-<article class="service"><div class="icon">▱</div><div><h3>Higher Education Safety Consulting</h3><p>Strategic guidance for campus safety, threat assessment, preparedness, and regulatory readiness.</p></div></article>
-<article class="service"><div class="icon">♙</div><div><h3>Executive Protection Strategy</h3><p>Strategic planning for executive safety, dignitary risks, special events, and travel risk management.</p></div></article>
-<article class="service"><div class="icon">♧</div><div><h3>Threat Assessment & Behavioral Intervention</h3><p>Develop and enhance multidisciplinary threat assessment programs, policies, and intervention strategies.</p></div></article>
-<article class="service"><div class="icon">△</div><div><h3>Emergency Management & Crisis Preparedness</h3><p>Emergency operations planning, tabletop exercises, incident command, and after-action improvement.</p></div></article>
-<article class="service"><div class="icon">▤</div><div><h3>Training & Compliance Programs</h3><p>Customized training that builds skills, meets regulatory requirements, and strengthens organizational readiness.</p></div></article>
-<article class="service"><div class="icon">☷</div><div><h3>Safety & Security Program Reviews</h3><p>Evaluate existing programs, staffing, policies, and technologies to improve effectiveness and efficiency.</p></div></article>
-<article class="service"><div class="icon">♢</div><div><h3>Strategic Security Advisory</h3><p>Long-term advisory services to support risk management, planning, and executive decision-making.</p></div></article>
-<article class="service"><div class="icon">◎</div><div><h3>Accreditation & Compliance Readiness</h3><p>Support for Clery Act readiness, policy development, documentation, and accreditation preparedness.</p></div></article>
-</div></section>
-<section id="leadership" class="leadership section num" data-num="4"><div class="heading"><h2>Leadership You Can Trust</h2><div class="rule"></div></div><div class="leaders"><article class="leader"><div class="portrait kevin"></div><div><h3>Kevin Phillips</h3><div class="role">Chief Executive Officer</div><p>30+ years of executive leadership in law enforcement, higher education, healthcare security, and executive protection.</p><ul><li>FBI National Academy</li><li>DEA Task Force</li><li>Hospital Police Leadership</li><li>Executive Security Operations</li><li>Campus Safety Leadership</li></ul></div></article><article class="leader"><div class="portrait virginia"></div><div><h3>Virginia Phillips</h3><div class="role">President</div><p>30+ years of leadership in organizational development, strategic planning, and client success.</p><ul><li>Leadership Development</li><li>Strategic Planning</li><li>Organizational Effectiveness</li><li>Program Implementation</li><li>Executive Relationship Management</li></ul></div></article></div></section>
-<section id="insights" class="insights"><div><div class="kicker">INSIGHTS</div><h2>Prepared organizations make better decisions.</h2></div><a class="button outline" href="#contact">EXPLORE INSIGHTS →</a></section>
-<section id="contact" class="contact section num" data-num="5"><div class="contact-brand"><img src="images/SB_Logo.png" alt=""><div><h2>Let’s Build a<br><em>Safer Organization Together.</em></h2><p>Whether you need a risk assessment, strategic guidance,<br>or support for a complex challenge, we're here to help.</p></div></div><div class="details"><a href="tel:+18595550198">☎ <span>(859) 555-0198</span></a><a href="mailto:info@sentinelbridgegroup.com">✉ <span>info@sentinelbridgegroup.com</span></a><a href="#">in <span>linkedin.com/company/sentinelbridgegroup</span></a></div><a class="button gold" href="mailto:info@sentinelbridgegroup.com">SCHEDULE A CONSULTATION →</a></section>
-</main>
-<footer><div class="footer-brand"><img src="images/SB_Logo.png" alt=""><strong>SENTINEL BRIDGE<br><small>ADVISORY GROUP</small></strong></div><span>© 2026 Sentinel Bridge Advisory Group, LLC. All rights reserved.</span><div class="footer-links"><a href="#">PRIVACY POLICY</a><i>|</i><a href="#">TERMS OF USE</a></div></footer>
-<script>document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav').classList.remove('open')));</script>
-</body></html>
+    <header class="topbar"><a class="brand" href="#top"><img src="images/SB_Logo.png"
+                alt="Sentinel Bridge logo"><span><strong>SENTINEL BRIDGE</strong><small>ADVISORY
+                    GROUP</small></span></a><button class="menu"
+            onclick="document.querySelector('.nav').classList.toggle('open')" aria-label="Menu">☰</button>
+        <nav class="nav"><!--<a href="#about">ABOUT</a><a href="#services">SERVICES</a><a href="#contact">CONTACT</a>--!><a
+                class="cta" href="#contact">SCHEDULE A CONSULTATION →</a></nav>
+    </header>
+    <main id="top">
+        <section class="hero num" data-num="1">
+            <div class="hero-copy">
+                <h1>Strategic Safety.<br>Executive Readiness.<br><em>Trusted Leadership.</em></h1>
+                <p>Helping higher education institutions, healthcare organizations, and businesses build safer, more
+                    resilient organizations through strategic risk management and executive advisory services.</p>
+        </section>
+        <section id="about" class="about section num" data-num="2">
+            <div class="about-copy">
+                <div class="kicker">WHO WE ARE</div>
+                <h2>Trusted Advisors to<br>Organizational Leaders</h2>
+                <div class="rule"></div>
+                <p>Today's security challenges require more than responding to incidents—they require strategic
+                    leadership, proactive planning, and informed decision-making.</p>
+                <p>Sentinel Bridge Advisory Group partners with executive leaders to strengthen safety programs, improve
+                    preparedness, and build resilient organizations.</p>
+            </div>
+            <div class="about-right">
+                <div class="caps">
+                    <div class="cap"><b>◇</b>Identify and<br>Reduce Risk</div>
+                    <div class="cap"><b>♧</b>Strengthen<br>Safety Programs</div>
+                    <div class="cap"><b>☷</b>Improve Emergency<br>Preparedness</div>
+                    <div class="cap"><b>⌂</b>Enhance Organizational<br>Resilience</div>
+                    <div class="cap"><b>✓</b>Support Compliance &<br>Readiness</div>
+                </div>
+                <div class="meeting"></div>
+            </div>
+        </section>
+        <section id="services" class="services section num" data-num="3">
+            <div class="heading">
+                <h2>Our Services</h2>
+                <div class="rule"></div>
+            </div>
+            <div class="grid">
+                <article class="service">
+                    <div class="icon">◇</div>
+                    <div>
+                        <h3>Security Risk Assessments</h3>
+                        <p>Comprehensive assessments that identify vulnerabilities and provide prioritized, actionable
+                            recommendations.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">▱</div>
+                    <div>
+                        <h3>Higher Education Safety Consulting</h3>
+                        <p>Strategic guidance for campus safety, threat assessment, preparedness, and regulatory
+                            readiness.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">♙</div>
+                    <div>
+                        <h3>Executive Protection Strategy</h3>
+                        <p>Strategic planning for executive safety, dignitary risks, special events, and travel risk
+                            management.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">♧</div>
+                    <div>
+                        <h3>Threat Assessment & Behavioral Intervention</h3>
+                        <p>Develop and enhance multidisciplinary threat assessment programs, policies, and intervention
+                            strategies.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">△</div>
+                    <div>
+                        <h3>Emergency Management & Crisis Preparedness</h3>
+                        <p>Emergency operations planning, tabletop exercises, incident command, and after-action
+                            improvement.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">▤</div>
+                    <div>
+                        <h3>Training & Compliance Programs</h3>
+                        <p>Customized training that builds skills, meets regulatory requirements, and strengthens
+                            organizational readiness.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">☷</div>
+                    <div>
+                        <h3>Safety & Security Program Reviews</h3>
+                        <p>Evaluate existing programs, staffing, policies, and technologies to improve effectiveness and
+                            efficiency.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">♢</div>
+                    <div>
+                        <h3>Strategic Security Advisory</h3>
+                        <p>Long-term advisory services to support risk management, planning, and executive
+                            decision-making.</p>
+                    </div>
+                </article>
+                <article class="service">
+                    <div class="icon">◎</div>
+                    <div>
+                        <h3>Accreditation & Compliance Readiness</h3>
+                        <p>Support for Clery Act readiness, policy development, documentation, and accreditation
+                            preparedness.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="leadership" class="leadership section num" data-num="4">
+            <div class="heading">
+                <h2>Leadership You Can Trust</h2>
+                <div class="rule"></div>
+            </div>
+            <div class="leaders">
+                <article class="leader">
+                    <div class="portrait kevin"></div>
+                    <div>
+                        <h3>Kevin Phillips</h3>
+                        <div class="role">Chief Executive Officer</div>
+                        <p>30+ years of executive leadership in law enforcement, higher education, healthcare security,
+                            and executive protection.</p>
+                        <ul>
+                            <li>FBI National Academy</li>
+                            <li>DEA Task Force</li>
+                            <li>Hospital Police Leadership</li>
+                            <li>Executive Security Operations</li>
+                            <li>Campus Safety Leadership</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="leader">
+                    <div class="portrait virginia"></div>
+                    <div>
+                        <h3>Virginia Phillips</h3>
+                        <div class="role">President</div>
+                        <p>30+ years of leadership in organizational development, strategic planning, and client
+                            success.</p>
+                        <ul>
+                            <li>Leadership Development</li>
+                            <li>Strategic Planning</li>
+                            <li>Organizational Effectiveness</li>
+                            <li>Program Implementation</li>
+                            <li>Executive Relationship Management</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact section num" data-num="5">
+            <div class="contact-brand">
+                <div>
+                    <h2>Let’s Build a<br><em>Safer Organization Together.</em></h2>
+                    <p>Whether you need a risk assessment, strategic guidance,<br>or support for a complex challenge,
+                        we're here to help.</p>
+                </div>
+            </div>
+            <div class="details"><a href="tel:+18595550198">☎ <span>(859) 555-0198</span></a><a
+                    href="mailto:info@sentinelbridgegroup.com">✉ <span>info@sentinelbridgegroup.com</span></a><a
+                    href="#">in <span>linkedin.com/company/sentinelbridgegroup</span></a></div><a class="button gold"
+                href="mailto:info@sentinelbridgegroup.com">SCHEDULE A CONSULTATION →</a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-brand"><strong>SENTINEL BRIDGE<br><small>ADVISORY
+                    GROUP</small></strong></div><span>© 2026 Sentinel Bridge Advisory Group, LLC. All rights
+            reserved.</span>
+        <div class="footer-links"><!--<a href="#">PRIVACY POLICY</a><i>|</i><a href="#">TERMS OF USE</a>--!></div>
+    </footer>
+    <script>document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open')));</script>
+</body>
+
+</html>
