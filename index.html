@@ -615,6 +615,293 @@
                     padding: 18px 24px
                 }
             }
+        }
+
+        /* =========================================================
+   CONSULTATION FORM MODAL
+   ========================================================= */
+
+        #consultationModal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+
+            background: rgba(3, 20, 45, 0.82);
+
+            padding: 20px;
+            overflow-y: auto;
+
+            box-sizing: border-box;
+        }
+
+        /* ONLY show the modal when JavaScript adds .open */
+        #consultationModal.open {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #consultationModal * {
+            box-sizing: border-box;
+        }
+
+        #consultationModal .modal-card {
+            position: relative;
+
+            width: 100%;
+            max-width: 680px;
+            max-height: calc(100vh - 40px);
+
+            overflow-y: auto;
+
+            background: #f7f2e8;
+            color: #071a3a;
+
+            padding: 35px;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+        }
+
+        /* Close button */
+
+        #consultationModal .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+
+            border: none;
+            background: transparent;
+
+            color: #071a3a;
+
+            font-size: 32px;
+            line-height: 1;
+
+            cursor: pointer;
+        }
+
+        #consultationModal .modal-close:hover {
+            color: #c58a1b;
+        }
+
+        /* Heading */
+
+        #consultationModal h2 {
+            margin: 0 40px 8px 0;
+
+            color: #071a3a;
+
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-weight: 500;
+        }
+
+        #consultationModal h2 em {
+            color: #c58a1b;
+            font-style: normal;
+        }
+
+        #consultationModal .modal-intro {
+            margin: 0 0 25px;
+
+            color: #40516a;
+
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* Form layout */
+
+        #consultationModal .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        #consultationModal .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        #consultationModal .form-field.full {
+            grid-column: 1 / -1;
+        }
+
+        /* Labels */
+
+        #consultationModal .form-field label,
+        #consultationModal legend {
+            color: #071a3a;
+
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* Inputs */
+
+        #consultationModal input[type="text"],
+        #consultationModal input[type="email"],
+        #consultationModal input[type="tel"],
+        #consultationModal textarea {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #b8bec8;
+            border-radius: 0;
+
+            background: #ffffff;
+            color: #071a3a;
+
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+
+        #consultationModal input:focus,
+        #consultationModal textarea:focus {
+            outline: none;
+
+            border-color: #c58a1b;
+
+            box-shadow: 0 0 0 2px rgba(197, 138, 27, 0.18);
+        }
+
+        #consultationModal textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        /* Service checkboxes */
+
+        #consultationModal .form-options {
+            margin: 0;
+            padding: 0;
+
+            border: 0;
+        }
+
+        #consultationModal .option-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 11px 20px;
+
+            margin-top: 10px;
+        }
+
+        #consultationModal .option {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+            gap: 8px;
+
+            color: #071a3a;
+
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 400;
+
+            cursor: pointer;
+        }
+
+        #consultationModal .option input[type="checkbox"] {
+            width: auto;
+
+            margin-top: 2px;
+
+            accent-color: #c58a1b;
+        }
+
+        /* Buttons */
+
+        #consultationModal .form-actions {
+            display: flex;
+            align-items: center;
+
+            gap: 15px;
+
+            margin-top: 25px;
+        }
+
+        #consultationModal .form-submit {
+            border: none;
+            cursor: pointer;
+        }
+
+        #consultationModal .form-submit:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        /* Status message */
+
+        #consultationModal .form-status {
+            display: none;
+
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        #consultationModal .form-status.show {
+            display: block;
+        }
+
+        #consultationModal .form-status.success {
+            color: #24633a;
+        }
+
+        #consultationModal .form-status.error {
+            color: #9b2c2c;
+        }
+
+        /* Spam honeypot */
+
+        #consultationModal .honeypot {
+            position: absolute !important;
+            left: -10000px !important;
+
+            width: 1px !important;
+            height: 1px !important;
+
+            overflow: hidden !important;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 760px) {
+
+            #consultationModal {
+                padding: 10px;
+            }
+
+            #consultationModal .modal-card {
+                padding: 25px 20px;
+                max-height: calc(100vh - 20px);
+            }
+
+            #consultationModal .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #consultationModal .form-field.full {
+                grid-column: auto;
+            }
+
+            #consultationModal .option-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #consultationModal .form-actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
@@ -749,10 +1036,14 @@
                         <h3>Kevin Phillips</h3>
                         <div class="role">Chief Executive Officer</div>
                         <p>30+ years of leadership experience across law enforcement, healthcare security, higher education,
-                            and public safety. Kevin specializes in building and leading comprehensive safety and security programs that
-                            strengthen organizational readiness, reduce risk, and protect people and critical operations.
-                            His experience includes security risk management, emergency management, crisis response, policy development,
-                            regulatory compliance, and strategic security planning, with extensive experience collaborating across
+                            and public safety. Kevin specializes in building and leading comprehensive safety and
+                            security programs that
+                            strengthen organizational readiness, reduce risk, and protect people and critical
+                            operations.
+                            His experience includes security risk management, emergency management, crisis response,
+                            policy development,
+                            regulatory compliance, and strategic security planning, with extensive experience
+                            collaborating across
                             organizations and with local, state, and federal partners.
                         </p>
                         <ul>
@@ -771,8 +1062,10 @@
                     <div>
                         <h3>Virginia Phillips</h3>
                         <div class="role">President</div>
-                        <p>30+ years of leadership experience helping organizations turn strategy into action through strategic
-                            planning, training, organizational readiness, exceptional customer service, and program implementation.
+                        <p>30+ years of leadership experience helping organizations turn strategy into action through
+                            strategic
+                            planning, training, organizational readiness, exceptional customer service, and program
+                            implementation.
                         </p>
                         <ul>
                             <li>Strategic Planning & Advisory</li>
@@ -786,7 +1079,7 @@
                 </article>
             </div>
         </section>
-        
+
         <section id="contact" class="contact section num" data-num="5">
             <div class="contact-brand">
                 <div>
@@ -801,20 +1094,194 @@
                 <a href="mailto:virginia@sentinelbridgehq.com">✉ <span>virginia@sentinelbridgehq.com</span></a>
             </div>
             <div class="details">
-                <a class="button gold" href="mailto:virginia@sentinelbridgehq.com?subject=Consultation&body=Name*%0D%0A
-                [Short%20Answer]%0D%0A%0D%0AOrganization*%0D%0A[Short%20Answer]%0D%0A%0D%0ATitle%20/%20Position%0D%0A
-                [Short%20Answer]%0D%0A%0D%0APhone%20Number%0D%0A[Phone]
-                %0D%0A%0D%0ATell%20Us%20About%20Your%20Needs%0D%0A[Long%20Answer]">SCHEDULE A CONSULTATION →</a>
+                <button type="button" class="button gold form-submit" onclick="openConsultationForm()">SCHEDULE A
+                    CONSULTATION →</button>
             </div>
         </section>
+
+        <!-- Consultation form -->
+        <div id="consultationModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="consultationTitle">
+            <div class="modal-card">
+                <button type="button" class="modal-close" onclick="closeConsultationForm()"
+                    aria-label="Close consultation form">&times;</button>
+
+                <h2 id="consultationTitle">Start a <em>Conversation</em></h2>
+                <p class="modal-intro">
+                    Tell us a little about your needs and a member of the Sentinel Bridge team will follow up.
+                </p>
+
+                <form id="consultationForm" onsubmit="submitConsultation(event)">
+                    <!-- Honeypot field for basic spam protection. Leave empty. -->
+                    <div class="honeypot" aria-hidden="true">
+                        <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="formName">Name <span>*</span></label>
+                            <input id="formName" name="name" type="text" required maxlength="100" autocomplete="name"
+                                placeholder="Your name">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="formEmail">Email <span>*</span></label>
+                            <input id="formEmail" name="email" type="email" required maxlength="160"
+                                autocomplete="email" placeholder="you@example.com">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="formPhone">Phone</label>
+                            <input id="formPhone" name="phone" type="tel" maxlength="30" autocomplete="tel"
+                                placeholder="(###) ###-####">
+                        </div>
+
+                        <div class="form-field full">
+                            <fieldset class="form-options">
+                                <legend>What can we help you with? <span class="required">*</span></legend>
+                                <div class="option-grid">
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Security Risk Assessments"> Security Risk Assessments</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Higher Education Safety Consulting"> Higher Education Safety
+                                        Consulting</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Executive Protection Strategy"> Executive Protection Strategy</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Threat Assessment & Behavioral Intervention"> Threat Assessment &
+                                        Behavioral
+                                        Intervention</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Emergency Management & Crisis Preparedness"> Emergency Management &
+                                        Crisis
+                                        Preparedness</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Training & Compliance Programs"> Training & Compliance
+                                        Programs</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Safety & Security Program Reviews"> Safety & Security Program
+                                        Reviews</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Strategic Security Advisory"> Strategic Security Advisory</label>
+                                    <label class="option"><input type="checkbox" name="services"
+                                            value="Accreditation & Compliance Readiness"> Accreditation & Compliance
+                                        Readiness</label>
+                                    <label class="option"><input type="checkbox" name="services" value="Other">
+                                        Other</label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="form-field full">
+                            <label for="formDetails">Tell Us About Your Needs</label>
+                            <textarea id="formDetails" name="details" maxlength="3000"
+                                placeholder="Please provide any details that will help us understand your needs."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button id="consultationSubmit" type="submit" class="button gold form-submit">
+                            SUBMIT REQUEST →
+                        </button>
+                        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footer-brand"><strong>SENTINEL BRIDGE<br><small>ADVISORY
                     GROUP</small></strong></div><span>© 2026 Sentinel Bridge Advisory Group, LLC. All rights
             reserved.</span>
-        <div class="footer-links"><!--<a href="#">PRIVACY POLICY</a><i>|</i><a href="#">TERMS OF USE</a>--!></div>
+        <div class="footer-links"><!--<a href="#">PRIVACY POLICY</a><i>|</i><a href="#">TERMS OF USE</a>--></div>
     </footer>
-    <script>document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open')));</script>
+    <script>
+        // Replace this with the /exec URL from your deployed Google Apps Script web app.
+        const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkfH9LtzfGkJ1sddVqsCqC39IPhlJcdv1BImhIFZmNXU5mcs0GpYYA5CLeW7HVVrQg/exec";
+
+        document.querySelectorAll('.nav a').forEach(a =>
+            a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open'))
+        );
+
+        function openConsultationForm() {
+            const modal = document.getElementById('consultationModal');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => document.getElementById('formName').focus(), 50);
+        }
+
+        function closeConsultationForm() {
+            document.getElementById('consultationModal').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('consultationModal').addEventListener('click', function (event) {
+            if (event.target === this) closeConsultationForm();
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') closeConsultationForm();
+        });
+
+        async function submitConsultation(event) {
+            event.preventDefault();
+
+            const form = document.getElementById('consultationForm');
+            const submitButton = document.getElementById('consultationSubmit');
+            const status = document.getElementById('formStatus');
+            const selectedServices = [...form.querySelectorAll('input[name="services"]:checked')];
+
+            status.className = 'form-status';
+            status.textContent = '';
+
+            if (selectedServices.length === 0) {
+                status.textContent = 'Please select at least one area you would like help with.';
+                status.className = 'form-status show error';
+                return;
+            }
+
+            // Basic anti-spam honeypot.
+            if (form.elements.website.value.trim() !== '') {
+                form.reset();
+                status.textContent = 'Thank you. Your request has been received.';
+                status.className = 'form-status show success';
+                return;
+            }
+
+            if (!GOOGLE_APPS_SCRIPT_URL || GOOGLE_APPS_SCRIPT_URL.includes('PASTE_YOUR')) {
+                status.textContent = 'The form is not connected to Google Sheets yet. Add your Apps Script Web App URL.';
+                status.className = 'form-status show error';
+                return;
+            }
+
+            const formData = new FormData(form);
+            formData.set('services', selectedServices.map(x => x.value).join(', '));
+            formData.delete('website');
+
+            submitButton.disabled = true;
+            submitButton.textContent = 'SUBMITTING...';
+
+            try {
+                // no-cors is intentional: Apps Script accepts the POST, while the browser
+                // does not need to read the response. This keeps the static site simple.
+                await fetch(GOOGLE_APPS_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+
+                form.reset();
+                status.textContent = 'Thank you. Your request has been submitted. We will be in touch soon.';
+                status.className = 'form-status show success';
+            } catch (error) {
+                console.error(error);
+                status.textContent = 'We could not submit the form. Please call us at 678-343-0043.';
+                status.className = 'form-status show error';
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'SUBMIT REQUEST →';
+            }
+        }
+    </script>
 </body>
 
 </html>
