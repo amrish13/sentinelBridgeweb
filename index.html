@@ -1196,7 +1196,7 @@
     </footer>
     <script>
         // Replace this with the /exec URL from your deployed Google Apps Script web app.
-        const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkfH9LtzfGkJ1sddVqsCqC39IPhlJcdv1BImhIFZmNXU5mcs0GpYYA5CLeW7HVVrQg/exec";
+        const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbztxYI59etrvPY-kKPnnoB_DRZ4vQFQuU_woEwMJb42Hh7pcRAnSALPv441UAmQlPqd/exec";
 
         document.querySelectorAll('.nav a').forEach(a =>
             a.addEventListener('click', () => document.querySelector('.nav').classList.remove('open'))
@@ -1263,11 +1263,15 @@
             try {
                 // no-cors is intentional: Apps Script accepts the POST, while the browser
                 // does not need to read the response. This keeps the static site simple.
-                await fetch(GOOGLE_APPS_SCRIPT_URL, {
+                const json = Object.fromEntries(formData);
+
+                const response = await fetch(GOOGLE_APPS_SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    body: formData
+                    body: JSON.stringify(json)
                 });
+
+                console.log(await JSON.stringify(response.json));
 
                 form.reset();
                 status.textContent = 'Thank you. Your request has been submitted. We will be in touch soon.';
